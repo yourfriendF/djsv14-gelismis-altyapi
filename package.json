@@ -1,0 +1,24 @@
+{
+  "name": "djsv14-altyapi",
+  "version": "1.0.0",
+  "description": "discordjs v14 altyapı",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord bot",
+    "discord.js",
+    "v14",
+    "altyapı",
+    "gelişmiş",
+    "yourfriend"
+  ],
+  "author": "yourfriendF",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "mongoose": "^6.5.4",
+    "string-similarity": "^4.0.4"
+  }
+}
