@@ -179,6 +179,10 @@ Hem slash komutlar için hem de prefixli komutlar için bir yetki kontrolü yapm
 `eval` komudu kodlarınızı denemeye yarayan bir komuttur. Halihazırda hem modal şeklinde hem de prefixli haliyle komutlar içinde var. Komudu kullanabilmek için kodda `ownerID` yazan yere kendi IDnizi yazın.
 
 ---
+#### 13- Avatar Komudu ve Örnekler
+`commands/user/avatar.js` konumunda bulunan avatar komuduyla hem prefixli hem slashlı hem de sağ tıklı komut nasıl yapılır onu örneklendirdim. Ayrıca bir tane komut, bir tane event, birer tane de interaction örneği bıraktım. Onları inceleyerek altyapıyı kendi kodlarınıza uygun hale getirebilirsiniz.
+
+---
 ### Çalıştırma
 Botu başlatmak için `node app.js` kullanabilirsiniz.
 
