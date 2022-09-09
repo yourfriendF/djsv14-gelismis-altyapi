@@ -5,6 +5,7 @@
 - [X] Kullanımı Kolay
 - [X] Anlaşılır, Basit, Değişime Açık Kod
 - [X] İsteğe Bağlı Konfigüre Edilebilme
+- [X] Modallı `eval` Komutu
 
 ## 📜 İçerik
 - [X] Prefix, Slash ve Context Menü Komutları **(isteğe bağlı)**
@@ -33,15 +34,15 @@ npm install
 ---
 ### Dosyaları Düzenleme, Botu Ayarlama ve Önemli Notlar
 #### 1- Intent Ayarlama
-app.js dosyasında 4. satırda bulunan `intents:` kısmını botunuzun amacına göre düzeltin. Bunun için herhangi bir [intent hesaplama makinesi](https://discord-intents-calculator.vercel.app/) kullanılabilir.
+app.js dosyasında 9. satırda bulunan `intents:` kısmını botunuzun amacına göre düzeltin. Bunun için herhangi bir [intent hesaplama makinesi](https://discord-intents-calculator.vercel.app/) kullanılabilir.
 
 ---
 #### 2- Tokeni Ayarlama
-app.js dosyasında bulunan 9. satırdaki `token:` kısmına botunuzun tokenini **tırnakların arasına** yazın. Botunuzun tokenini [discord developer portaldan](https://discord.com/developers/applications) bulabilirsiniz
+app.js dosyasında bulunan 14. satırdaki `token:` kısmına botunuzun tokenini **tırnakların arasına** yazın. Botunuzun tokenini [discord developer portaldan](https://discord.com/developers/applications) bulabilirsiniz
 
 ---
 #### 3- Prefixli Komutlar
-Komutlarım aynı zamanda prefix ile de çalışsın diyorsanız 10. satırdaki `prefixCommands:` bölümünü
+Komutlarım aynı zamanda prefix ile de çalışsın diyorsanız 15. satırdaki `prefixCommands:` bölümünü
 ```js
 prefixCommands: ["PREFIX1", "PREFIX2"],
 ```
@@ -69,7 +70,7 @@ fonksiyonunu kaldırabilirsiniz. Ayrıca `events/commandHandler.js` dosyasını 
 
 ---
 #### 5- Global Slash Komutlar
-Komutlarım aynı zamanda eğik çizgi ile botun bulunduğu tüm sunucularda çalışsın diyorsanız 10. satırdaki `slashCommands:` bölümünü
+Komutlarım aynı zamanda eğik çizgi ile botun bulunduğu tüm sunucularda çalışsın diyorsanız 16. satırdaki `slashCommands:` bölümünü
 ```js
 slashCommands: "global",
 ```
@@ -85,7 +86,7 @@ fonksiyonunu düzenleyin.
 
 ---
 #### 6- Sunucuya Özel Slash Komutlar
-Komutlarım aynı zamanda eğik çizgi ile botun bulunduğu sadece bir sunucuda çalışsın diyorsanız 10. satırdaki `slashCommands:` bölümünü
+Komutlarım aynı zamanda eğik çizgi ile botun bulunduğu sadece bir sunucuda çalışsın diyorsanız 16. satırdaki `slashCommands:` bölümünü
 ```js
 slashCommands: "sunucuID",
 ```
@@ -101,7 +102,7 @@ fonksiyonunu düzenleyin.
 
 ---
 #### 7- Slash Komutları Kaldırma
-Komutlarım eğik çizgi ile çalışmasın diyorsanız 10. satırdaki `slashCommands:` bölümünü
+Komutlarım eğik çizgi ile çalışmasın diyorsanız 16. satırdaki `slashCommands:` bölümünü
 ```js
 slashCommands: undefined,
 ```
@@ -166,16 +167,24 @@ module.exports =  {
 };
 ```
 ---
-#### 10- Yetkiler Hakkında Bilgilendirme
+#### 10- Veritabanları
+Mongoose ile MongoDB kullanmak isterseniz app.js dosyasında 17. satırda bulunan `mongoDB:` kısmına **tırnak içerisinde** mongoURLnizi yazın. Başka bir veritabanı kullanmak istiyorsanız altyapı tarafında herhangi bir sıkıntı çıkmayacaktır.
+
+---
+#### 11- Yetkiler Hakkında Bilgilendirme
 Hem slash komutlar için hem de prefixli komutlar için bir yetki kontrolü yapmak çok zor olduğundan yetki & kanal sınırlandırmalarını if/else ile kendiniz kodlara yerleştireceksiniz. Slash komutlar için ise elle ayarlayın veya `SlashCommandBuilder().setDefaultMemberPermissions()` fonksiyonunu kullanın.
+
+---
+#### 12- Eval Komudu
+`eval` komudu kodlarınızı denemeye yarayan bir komuttur. Halihazırda hem modal şeklinde hem de prefixli haliyle komutlar içinde var. Komudu kullanabilmek için kodda `ownerID` yazan yere kendi IDnizi yazın.
 
 ---
 ### Çalıştırma
 Botu başlatmak için `node app.js` kullanabilirsiniz.
 
 ---
-## ✉️ Destek 
-Sadece kodda oluşan hatalar hakkında bana ulaşmak için [yourfriend#6889](https://discord.com/users/573531359843319856) yazabilirsiniz.
+## ✉️ Destek & Hatalar
+Kodlar test edilmiştir ancak hatalar olabilir. Sadece altyapı yüzünden oluşan hatalar hakkında bana ulaşmak için [yourfriend#6889](https://discord.com/users/573531359843319856) yazabilirsiniz.
 Diğer hatalar & istekler için [CodAre discord sunucusundan](https://discord.gg/codare) yardım alabilirsin.
 
 ## 🔗 Lisans
