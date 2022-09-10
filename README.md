@@ -5,7 +5,6 @@
 - [X] Kullanımı Kolay
 - [X] Anlaşılır, Basit, Değişime Açık Kod
 - [X] İsteğe Bağlı Konfigüre Edilebilme
-- [X] Modallı `eval` Komutu
 
 ## 📜 İçerik
 - [X] Prefix, Slash ve Context Menü Komutları **(isteğe bağlı)**
@@ -14,6 +13,8 @@
 - [X] MongoDB & Mongoose Handler **(isteğe bağlı)**
 - [X] Komutlara Cooldown Ekleme
 - [X] "Bunu mu demek istediniz?" Sistemi
+- [X] Modallı `eval` Komutu
+- [X] Komut/Event/Interaction Örnek Kodları (`example.js`)
 
 ## 🔒 Gereksinimler & Kullanılan Modüller
 - NPM 
