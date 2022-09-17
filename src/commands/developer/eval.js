@@ -1,5 +1,7 @@
 /* Definitions */
 const { SlashCommandBuilder, ModalBuilder,  TextInputBuilder, TextInputStyle, ActionRowBuilder, EmbedBuilder } = require("discord.js");
+const { performance } = require('perf_hooks');
+const util = require("util");
 
 /* Command */
 module.exports =  {
