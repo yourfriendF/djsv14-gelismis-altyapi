@@ -169,7 +169,7 @@ module.exports =  {
 ```
 ---
 #### 10- Veritabanları
-Mongoose ile MongoDB kullanmak isterseniz app.js dosyasında 17. satırda bulunan `mongoDB:` kısmına **tırnak içerisinde** mongoURLnizi yazın. Başka bir veritabanı kullanmak istiyorsanız altyapı tarafında herhangi bir sıkıntı çıkmayacaktır.
+Mongoose ile MongoDB kullanmak isterseniz app.js dosyasında 17. satırda bulunan `mongoDB:` kısmına **tırnak içerisinde** mongoURLnizi yazın. Başka bir veritabanı kullanmak istiyorsanız `mongoDB:` kısmına **undefined** yazın. Başka veritabanları altyapı tarafında herhangi bir sıkıntı çıkarmayacaktır.
 
 ---
 #### 11- Yetkiler Hakkında Bilgilendirme
